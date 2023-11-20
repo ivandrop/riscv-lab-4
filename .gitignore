@@ -1,0 +1,5 @@
+lab
+lab.o
+*.swp
+.gdb_history
+*.bin
