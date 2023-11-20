@@ -1,10 +1,15 @@
 CFLAGS = -O3
 
-all: lab.o
-	g++ $(CFLAGS) autograder.o lab.o -o lab
+all: run
 
 lab.o: lab.cc
 	g++ $(CFLAGS) -c lab.cc -o lab.o
+
+lab: lab.o
+	g++ $(CFLAGS) autograder.o lab.o -o lab
+
+run: lab
+	./lab
 
 debug:
 	g++ -g -c lab.cc -o lab.o

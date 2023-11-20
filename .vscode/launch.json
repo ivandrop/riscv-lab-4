@@ -10,7 +10,8 @@
             "request": "launch",
             "target": "lab",
             "cwd": "${workspaceRoot}",
-            "valuesFormatting": "parseText"
+            "valuesFormatting": "parseText",
+            "preLaunchTask": "debug"
         }
     ]
 }
