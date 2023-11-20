@@ -2,7 +2,9 @@
 #include <stdint.h>
 #include <stdio.h>
 
-void setControl(uint32_t instBits, ControlSignals& outputSignals) {}
+void setControl(uint32_t instBits, ControlSignals& outputSignals) {
+  
+}
 
 // Assume that the lower 32-bits of instBits contain the instruction.
 uint32_t getExtendedBits(uint32_t instBits) {
