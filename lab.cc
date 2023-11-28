@@ -72,8 +72,9 @@ uint32_t getExtendedBits(uint32_t instBits) {
       break;
     // addi, andi, ori (I-Type)
     case 0x00000013:
-      if (instBits & 0x80000000) {
-        returnVal = (instBits + 0xFFFFFFFF) >> 20;
+      if (instBits >> 31) {
+        returnVal = instBits >> 20;
+        returnVal = returnVal | 0xFFFFF000;
       }
       else {
         returnVal = instBits >> 20;
